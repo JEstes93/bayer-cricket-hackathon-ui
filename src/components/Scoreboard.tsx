@@ -3,7 +3,6 @@ import { Button, Grid, Table, TableBody, TableCell, TableHead, TableRow } from '
 import { QuestionResult } from '../util/types';
 import { useRecoilValue } from 'recoil';
 import { gameResults } from '../recoil/atoms';
-import { comingSoon } from '../util/helpers';
 import { useHistory } from 'react-router';
 
 const createTableRow = ({ questionId, answer, choice }: QuestionResult) => (
@@ -41,7 +40,7 @@ export default function Scoreboard(): JSX.Element {
           </Button>
         </Grid>
         <Grid container item xs={6} justify="center">
-          <Button size="large" variant="outlined" className="answerBtn" onClick={comingSoon}>
+          <Button size="large" variant="outlined" className="answerBtn" onClick={() => history.push('/sponsor')}>
             Join Team?
           </Button>
         </Grid>
