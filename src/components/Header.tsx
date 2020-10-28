@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, IconButton } from '@material-ui/core';
+import { Button, Grid, IconButton } from '@material-ui/core';
 import { useHistory, useLocation } from 'react-router';
 import { useRecoilValue, useResetRecoilState, useSetRecoilState } from 'recoil';
 import { gameStatus, settingsVisible } from '../recoil/atoms';
@@ -58,6 +58,7 @@ export default function Header(): JSX.Element {
       </Grid>
 
       <Grid container direction="row" xs={4} justify="flex-end" alignItems="center">
+        <Button onClick={() => window.open('https://uwgsl.tfaforms.net/4602967', '_blank')}>Donate Now</Button>
         {isLoggedIn && (
           <IconButton size="medium" focusRipple onClick={() => setShowSettings(true)}>
             <Settings />

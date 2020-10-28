@@ -62,6 +62,7 @@ $brandWhite: white;
     @include constrainDimensions(80vw, 80vh);
     @extend %flexCentered;
     z-index: 100;
+    padding: 32px;
     background-color: $brandGray;
     &.row:not(.column) {
       flex-direction: row;

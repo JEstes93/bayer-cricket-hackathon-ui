@@ -8,6 +8,7 @@ import MainMenu from './components/pages/MainMenu';
 import Gameplay from './components/pages/Gameplay';
 import Header from './components/Header';
 import { userLoggedIn } from './recoil/selectors';
+import Sponsor from './components/pages/Sponsor';
 
 export default function App(): JSX.Element {
   const loggedIn = useRecoilValue(userLoggedIn);
@@ -19,6 +20,7 @@ export default function App(): JSX.Element {
         <Header />
         <Grid container className="contentContainer">
           <Switch>
+            <Route path="/sponsor" component={Sponsor} />
             <Route path="/game" component={Gameplay} />
             <Route exact path="/" render={() => (loggedIn ? <MainMenu /> : <LandingPage />)} />
             <Redirect path="*" to="/" />
